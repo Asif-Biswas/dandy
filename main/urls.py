@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UserViewSet, CategoryViewSet, StoreViewSet, ProductViewSet, SignupAPIView, SigninAPIView
+from .views import UserViewSet, CategoryViewSet, StoreViewSet, ProductViewSet, SignupAPIView, SigninAPIView, LogoutAPIView
 
 
 urlpatterns = [
@@ -13,4 +13,5 @@ urlpatterns = [
     path('products/<int:pk>/', ProductViewSet.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
     path('signup/', SignupAPIView.as_view()),
     path('signin/', SigninAPIView.as_view()),
+    path('logout/', LogoutAPIView.as_view()),
 ]
