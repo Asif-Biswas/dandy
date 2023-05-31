@@ -18,7 +18,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [IsAuthenticated]  # Require authentication for Category API
+    #permission_classes = [IsAuthenticated]  # Require authentication for Category API
 
 class StoreViewSet(viewsets.ModelViewSet):
     queryset = Store.objects.all()
