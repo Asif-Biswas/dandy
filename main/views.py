@@ -13,22 +13,22 @@ from rest_framework import serializers
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    # permission_classes = [IsAuthenticated]  # Require authentication for User API
+    permission_classes = [IsAuthenticated]  # Require authentication for User API
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    # permission_classes = [IsAuthenticated]  # Require authentication for Category API
+    permission_classes = [IsAuthenticated]  # Require authentication for Category API
 
 class StoreViewSet(viewsets.ModelViewSet):
     queryset = Store.objects.all()
     serializer_class = StoreSerializer
-    # permission_classes = [IsAuthenticated]  # Require authentication for Store API
+    permission_classes = [IsAuthenticated]  # Require authentication for Store API
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    # permission_classes = [IsAuthenticated]  # Require authentication for Product API
+    permission_classes = [IsAuthenticated]  # Require authentication for Product API
 
 class SignupAPIView(APIView):
     permission_classes = [AllowAny]  # Allow any user (authenticated or not) to hit this endpoint

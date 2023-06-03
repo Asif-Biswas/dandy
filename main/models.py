@@ -28,6 +28,8 @@ class Product(models.Model):
     display = models.BooleanField(default=False)
     store = models.ForeignKey(Store, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    isSold = models.BooleanField(default=False)
+    picture = models.ImageField(upload_to='media/product_pictures/', blank=True)
     # You can add other fields specific to the Product model
 
 
